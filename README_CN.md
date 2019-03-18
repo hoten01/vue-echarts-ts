@@ -11,28 +11,28 @@
 </p>
 
 <p align="center">
-  <a>
+  <a  href="./README.md">
     English
   </a>
   <span> | </span>
-  <a href="./README_CN.md">
+  <a>
     中文
   </a>
 </p>
 
-> Vue custom component based on Vue2.x and Echarts with typescript
+> 基于Vue2.x和echarts的封装好的vue自定义组件
 
-## Features
-- **Vue echarts component:** Can directly be used in vue-typescirpt project as a custom component.Has already completed echarts instance initiation and handled window resizing.Can operate echarts instance to dispatch actions and other.
-- **Typescript supported:** Developed and exported with typescript.Support @types/echarts definitions.
+## 特点
+- **Vue组件:** 可以直接在vue-typescript项目中引用后使用。组件已经处理好echarts的初始化和窗口重绘事件。可以通过导出的echarts实例，自由的调用echarts的各种api。
+- **支持typescript:** 基于ts开发，支持编辑器的ts查询@types/echarts。
 
-## Install
+## 安装
 
 ```
 npm i vue-echarts-ts
 ```
 
-## Init
+## 初始化
 
 ```typescript
 import Vue from 'vue';
@@ -41,7 +41,7 @@ import VueEcharts from 'vue-echarts-ts';
 Vue.use(VueEcharts);
 ```
 
-## SimpleUse
+## 简单使用
 
 ```html
 <template>
@@ -60,7 +60,7 @@ export default class Home extends Vue {
     series: [
       {
         type: "pie",
-        data: [{ name: "cat", value: 100 }, { name: "dog", value: 180 }]
+        data: [{ name: "猫", value: 100 }, { name: "狗", value: 180 }]
       }
     ]
   };
@@ -68,7 +68,7 @@ export default class Home extends Vue {
   private dipatchAction() {
     this.ei.dispatchAction({
       type: "pieSelect",
-      name: "cat"
+      name: "猫"
     });
   }
 }
@@ -76,20 +76,20 @@ export default class Home extends Vue {
 
 ```
 
-## Document
+## 文档
 
 - option:
 
-    echartsOption,see [EchartsOption](https://echarts.baidu.com/option.html#title).
+    Echarts配置的option属性，具体配置见 [EchartsOption](https://echarts.baidu.com/option.html#title).
 
 - ei:
 
-    echartsInstance,see [EchartsApi](https://echarts.baidu.com/api.html#echarts).
+   Echarts初始化后返回的实例，可以调用各种api,见[EchartsApi](https://echarts.baidu.com/api.html#echarts).
 
-## License
+## 证书
 
 [MIT](http://opensource.org/licenses/MIT)
 
-## Support
+## 浏览器支持
 
-Modern browsers and Internet Explorer 10+, include pc and mobile browser.
+现代浏览器和IE10+，基本全部的移动端浏览器。
