@@ -1,6 +1,6 @@
 {
   "name": "vue-echarts-ts",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "private": false,
   "scripts": {
     "start": "npm run serve",
@@ -9,7 +9,7 @@
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit"
   },
-  "main":"dist/vue-echarts-ts.umd.js",
+  "main": "dist/vue-echarts-ts.umd.js",
   "dependencies": {
     "@types/echarts": "^4.1.5",
     "axios": "^0.18.0",
@@ -29,5 +29,24 @@
     "ts-jest": "^23.0.0",
     "typescript": "^3.2.1",
     "vue-template-compiler": "^2.5.21"
-  }
+  },
+  "description": "```\r npm install\r ```",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoten01/vue-echarts-ts.git"
+  },
+  "keywords": [
+    "vue",
+    "echarts",
+    "typescript"
+  ],
+  "author": "Hoten H.Huang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hoten01/vue-echarts-ts/issues"
+  },
+  "homepage": "https://github.com/hoten01/vue-echarts-ts#readme"
 }
