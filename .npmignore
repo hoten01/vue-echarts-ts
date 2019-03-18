@@ -13,3 +13,4 @@ tslint.json
 vue.config.js
 package-lock.json
 public/
+build.sh
