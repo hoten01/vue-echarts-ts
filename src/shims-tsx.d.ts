@@ -11,3 +11,9 @@ declare global {
     }
   }
 }
+declare global {
+  interface Window {
+      attachEvent(type: string, callback: any): void;
+      detachEvent(type: string, callback: any): void;
+  }
+}

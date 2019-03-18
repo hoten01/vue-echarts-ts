@@ -1,14 +1,19 @@
 {
-  "name": "vue-demo-npm-package",
+  "name": "vue-echarts-ts",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
+    "start": "npm run serve",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib --name vue-echarts-ts src/components/vue-echarts/index.ts",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit"
   },
+  "main":"dist/vue-echarts-ts.umd.js",
   "dependencies": {
+    "@types/echarts": "^4.1.5",
+    "axios": "^0.18.0",
+    "echarts": "^4.1.0",
     "vue": "^2.6.6",
     "vue-class-component": "^6.0.0",
     "vue-property-decorator": "^7.0.0"

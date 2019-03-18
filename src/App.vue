@@ -1,29 +1,54 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <VueEcharts v-if="loaded" :option="option" class="ec" :ei.sync="ei"></VueEcharts>
+    <button @click="change()">修改</button>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from './components/HelloWorld.vue';
-
-@Component({
-  components: {
-    HelloWorld,
-  },
-})
-export default class App extends Vue {}
+import { Component, Vue } from "vue-property-decorator";
+import axios from "@/plugins/axios.ts";
+import { ECharts } from "echarts";
+@Component
+export default class App extends Vue {
+  private loaded = false;
+  private option = {
+    title: {
+      text: "测试1"
+    },
+    legend: {},
+    series: [
+      {
+        type: "pie"
+      }
+    ]
+  } as any;
+  private ei: any | ECharts = {};
+  private change() {
+    console.log(this.ei);
+    this.ei.dispatchAction({
+      type: "pieSelect",
+      name: "猫"
+    });
+    axios.get("/data/pie2.json").then((res: any) => {
+      this.option = Object.assign({}, this.option);
+      this.$set(this.option.series[0], "data", res.data.data);
+      this.$set(this.option.legend, "data", res.data.name);
+      console.log(this.option);
+    });
+  }
+  private mounted() {
+    axios.get("/data/pie.json").then((res: any) => {
+      this.option.series[0].data = res.data.data;
+      this.option.legend.data = res.data.name;
+      this.loaded = true;
+    });
+  }
+}
 </script>
-
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.ec {
+  width: 800px;
+  height: 600px;
 }
 </style>
