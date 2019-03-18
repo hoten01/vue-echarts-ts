@@ -6,20 +6,14 @@
     "start": "npm run serve",
     "serve": "vue-cli-service serve",
     "build": "bash ./build.sh",
-    "build-component": "vue-cli-service build --target lib --name vue-echarts-ts src/components/vue-echarts/index.ts",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit"
   },
   "main": "publish/index.ts",
   "dependencies": {
-    "@types/echarts": "^4.1.5",
-    "axios": "^0.18.0",
-    "echarts": "^4.1.0",
-    "vue": "^2.6.6",
-    "vue-class-component": "^6.0.0",
-    "vue-property-decorator": "^7.0.0"
   },
   "devDependencies": {
+    "vue": "^2.6.6",
     "@types/jest": "^23.1.4",
     "@vue/cli-plugin-babel": "^3.5.0",
     "@vue/cli-plugin-typescript": "^3.5.0",
@@ -27,11 +21,16 @@
     "@vue/cli-service": "^3.5.0",
     "@vue/test-utils": "1.0.0-beta.29",
     "babel-core": "7.0.0-bridge.0",
+    "axios": "^0.18.0",
     "ts-jest": "^23.0.0",
     "typescript": "^3.2.1",
+    "@types/echarts": "^4.1.5",
+    "echarts": "^4.1.0",
+    "vue-class-component": "^6.0.0",
+    "vue-property-decorator": "^7.0.0",
     "vue-template-compiler": "^2.5.21"
   },
-  "description": "```\r npm install\r ```",
+  "description": "```\r npm install vue-echarts-ts\r ```",
   "directories": {
     "test": "tests"
   },
