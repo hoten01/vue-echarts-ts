@@ -5,11 +5,12 @@
   "scripts": {
     "start": "npm run serve",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name vue-echarts-ts src/components/vue-echarts/index.ts",
+    "build": "bash ./build.sh",
+    "build-component": "vue-cli-service build --target lib --name vue-echarts-ts src/components/vue-echarts/index.ts",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit"
   },
-  "main": "dist/vue-echarts-ts.umd.js",
+  "main": "publish/index.ts",
   "dependencies": {
     "@types/echarts": "^4.1.5",
     "axios": "^0.18.0",

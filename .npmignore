@@ -1,11 +1,15 @@
 node_modules/
 src/
 tests/
+dist/
 .browserslistrc
 /gitignore
+.npmignore
 babel.config.js
 jest.config.js
 postcss.config.js
 tsconfig.json
 tslint.json
 vue.config.js
+package-lock.json
+public/
