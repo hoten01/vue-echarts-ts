@@ -30,7 +30,7 @@
     "vue-property-decorator": "^7.0.0",
     "vue-template-compiler": "^2.5.21"
   },
-  "description": "```\r npm install vue-echarts-ts\r ```",
+  "description": "Vue custom component based on Vue2.x and Echarts with typescript",
   "directories": {
     "test": "tests"
   },
