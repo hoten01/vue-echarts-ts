@@ -48,7 +48,7 @@ export default class App extends Vue {
 </script>
 <style>
 .ec {
-  width: 800px;
-  height: 600px;
+  width: 90vw;
+  height: 80vh;
 }
 </style>
