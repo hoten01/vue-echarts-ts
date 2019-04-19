@@ -1,5 +1,5 @@
 <template>
-  <div id="vue-echarts" ref="ele"></div>
+  <div class="vue-echarts" ref="ele"></div>
 </template>
 
 <script lang="ts">
@@ -59,7 +59,7 @@ export default class VueEchartsComponent extends Vue {
 </script>
 
 <style scoped>
-#vue-echarts {
+.vue-echarts {
   min-height: 100px;
   min-width: 100px;
 }
