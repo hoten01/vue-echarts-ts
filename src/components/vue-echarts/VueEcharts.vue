@@ -5,6 +5,12 @@
 <script lang="ts">
 import { Component, Prop, Vue, Watch } from "vue-property-decorator";
 import echarts, { ECharts, EChartOption } from "echarts";
+declare global {
+  interface Window {
+    attachEvent(type: string, callback: any): void;
+    detachEvent(type: string, callback: any): void;
+  }
+}
 @Component
 export default class VueEchartsComponent extends Vue {
   private echartsInstance!: ECharts;
