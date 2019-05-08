@@ -11,11 +11,19 @@ declare global {
     detachEvent(type: string, callback: any): void;
   }
 }
+interface EchartsInitOption {
+  devicePixelRatio?: number;
+  renderer?: string;
+  width?: number | string;
+  height?: number | string;
+}
 @Component
 export default class VueEchartsComponent extends Vue {
   private echartsInstance!: ECharts;
   @Prop() private ei!: ECharts;
   @Prop() private option!: EChartOption;
+  @Prop() private theme?: string;
+  @Prop() private initOption?: EchartsInitOption;
   @Watch("option", { deep: true })
   private optionChanged(v: EChartOption, oldV: EChartOption) {
     this.renderEcharts();
@@ -25,7 +33,11 @@ export default class VueEchartsComponent extends Vue {
   }
   private Init() {
     if (this.option) {
-      this.echartsInstance = echarts.init(this.$refs.ele as HTMLDivElement);
+      this.echartsInstance = echarts.init(
+        this.$refs.ele as HTMLDivElement,
+        this.theme,
+        this.initOption
+      );
       this.$emit("update:ei", this.echartsInstance);
       if (window.addEventListener) {
         window.addEventListener("resize", this.resizeEventHandler, false);

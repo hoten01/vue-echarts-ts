@@ -78,6 +78,8 @@ export default class Home extends Vue {
 
 ## 文档
 
+组件参数：
+
 - option:
 
     Echarts配置的option属性，具体配置见 [EchartsOption](https://echarts.baidu.com/option.html#title).
@@ -85,6 +87,14 @@ export default class Home extends Vue {
 - ei:
 
    Echarts初始化后返回的实例，可以调用各种api,见[EchartsApi](https://echarts.baidu.com/api.html#echarts).
+
+- theme:
+
+    Echarts初始化时传递的主题名，见 [EchartsTheme](https://echarts.baidu.com/download-theme.html).
+
+- init-option:
+
+    Echarts初始化时传递的配置对象，见 [EchartsInit](https://echarts.baidu.com/api.html#echarts.init)
 
 ## 证书
 

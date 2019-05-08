@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <VueEcharts v-if="loaded" :option="option" class="ec" :ei.sync="ei"></VueEcharts>
+    <VueEcharts v-if="loaded" :option="option" class="ec" :ei.sync="ei" :theme="'vintage'"></VueEcharts>
     <button @click="change()">修改</button>
   </div>
 </template>

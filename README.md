@@ -78,6 +78,8 @@ export default class Home extends Vue {
 
 ## Document
 
+Props:
+
 - option:
 
     echartsOption,see [EchartsOption](https://echarts.baidu.com/option.html#title).
@@ -85,6 +87,14 @@ export default class Home extends Vue {
 - ei:
 
     echartsInstance,see [EchartsApi](https://echarts.baidu.com/api.html#echarts).
+
+- theme:
+
+    theme used for echarts init,see [EchartsTheme](https://echarts.baidu.com/download-theme.html).
+
+- init-option:
+
+    object used for echarts init,see [EchartsInit](https://echarts.baidu.com/api.html#echarts.init)
 
 ## License
 
